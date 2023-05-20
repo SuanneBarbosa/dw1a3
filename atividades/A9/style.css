@@ -1,0 +1,45 @@
+
+body {
+  text-align: center;
+  padding: 20px;
+  background: #3d3d3d;
+  font-family:'Poppins', sans-serif;
+  color: greenyellow;
+}
+
+h1 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+#objeto {
+  width: 200px;
+  height: 200px;
+  background-color: #ff0000; 
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#terminal {
+  border: 1px solid #565656;
+  padding: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+#mudarCor{
+  margin-bottom: 15px;
+  background-color: #565656;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.linha {
+  margin: 5px 0;
+}
