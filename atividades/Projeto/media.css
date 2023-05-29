@@ -1,0 +1,22 @@
+@media screen and (max-width: 760px){
+    body{
+        flex-direction: column;
+    }
+    .card{
+        width: 90%;
+        height: 50%;
+        margin-top: 0px !important;
+        
+        
+    }
+    .container{
+        display: block;
+        height: 78%;
+        width: 93%;
+    }
+    .subtitulo{
+        display: none;
+    }
+
+    
+}

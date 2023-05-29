@@ -1,36 +1,39 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-   href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-   rel="stylesheet"
-/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="media.css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
     <title>Pomodoro</title>
 </head>
 
-<body>
+<body class="vsc-initialized">
 
 <header>
    
     <div id="title">
-    <h1>Timer Pomodoro</h1>
-    <h4>Controle seu foco!</h4>
+    <div style="
+    float: left;padding-left:20px;
+"><h1>Timer Pomodoro</h1></div>
+    <div style="
+    float: right;padding-right: 20px;
+"><h1 class="subtitulo" style="font-family: 'Caveat', cursive;
+    font-size: 30px; font-weight: bold">Controle seu foco!</h1></div>
 
-  
+
 </div>
 </header>
    
-    <div class= "container">
+    <div class="container">
     <div class="card">
         <div id="types">
             <button id="actionPomodoro" onclick="actionPomodoro()">Pomodoro</button>
@@ -41,9 +44,7 @@
     
         <br>
         <div id="timer">
-            <p id="timerText">
-                25:00
-            </p>
+            <p id="timerText">04:55</p>
 
         </div>
     
@@ -63,6 +64,7 @@
 </div>
   </footer>
 
-</body>
+
 <script src="./app.js"></script>
+</body>
 </html>
