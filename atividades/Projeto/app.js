@@ -4,6 +4,9 @@ let final = 0
 let timerInterval;
 let segundos = 0
 let minutos = Math.floor(inicio/60) 
+let modificadorPomodoro = 0
+let modificadorShortBreak = 0 
+let modificadorLongBreak = 0
 const pomodoroValue = 1500
 const shortBreakValue = 300
 const longBreakValue = 900
@@ -32,16 +35,46 @@ function changeTimer (newStarValue) {
     timerExibition()
 }
 
+function verificarTempoMinimo (value, modificador, time){
+    if ( (value + modificador + time) < 60) { 
+        throw new Error("Tempo mínimo alcançado!")
+    }      
+}
+
+function actionModificar(time, action){
+    try {
+        let tempoTotal = 0
+        if (action == "pomodoro") { 
+            verificarTempoMinimo(pomodoroValue, modificadorPomodoro, time)
+            modificadorPomodoro += time 
+            tempoTotal = pomodoroValue + modificadorPomodoro
+            
+        } else if (action == "shortBreak"){
+            verificarTempoMinimo(shortBreakValue, modificadorShortBreak, time)
+            modificadorShortBreak += time 
+            tempoTotal = shortBreakValue + modificadorShortBreak
+        } else {
+            verificarTempoMinimo(longBreakValue, modificadorLongBreak, time)
+            modificadorLongBreak += time 
+            tempoTotal = longBreakValue + modificadorLongBreak
+        }    
+        changeTimer(tempoTotal)  
+    } catch (error) {
+        alert(error.message)
+    }
+}
+
 function actionPomodoro () {
-    changeTimer(pomodoroValue)
+    changeTimer(pomodoroValue + modificadorPomodoro)
 }
 
 function actionShortBreak () {
-   changeTimer(shortBreakValue)
+   changeTimer(shortBreakValue + modificadorShortBreak)
+   
 }
 
 function actionLongBreak () {
-    changeTimer(longBreakValue)
+    changeTimer(longBreakValue + modificadorLongBreak)
 }
 
 function beep () {

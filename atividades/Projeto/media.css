@@ -2,17 +2,24 @@
     body{
         flex-direction: column;
     }
+    #types{
+        flex-direction: column;
+    }
+.sobre {
+    display: none;
+}
     .card{
-        width: 90%;
-        height: 50%;
+        justify-content: center;
+        width: 80%;
+        height: 70%;
         margin-top: 0px !important;
-        
-        
     }
     .container{
-        display: block;
-        height: 78%;
-        width: 93%;
+        /* display: block; */
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
     }
     .subtitulo{
         display: none;

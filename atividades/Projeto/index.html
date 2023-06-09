@@ -1,69 +1,101 @@
 <html lang="pt-br">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="media.css" media="screen">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
 
     <title>Pomodoro</title>
 </head>
 
-<body class="vsc-initialized">
+<body >
 
-<header>
+    <header>
+
+        <div id="title">
+            <div style="float: left;padding-left:70px;">
+                <h1>Timer Pomodoro</h1>
+            </div>
+
+            <div class="subtitulo" style="float: right;padding-right: 80px;">
+                <h1 class="subtitulotexto"> <a href="#rodape"> Informações</a></h1>
+            </div>
+            <div class="subtitulo" style="float: right;padding-right: 20px;">
+                <h1 class="subtitulotexto"> <a href="#sobre">Sobre</a> </h1>
+            </div>
+            <div class="subtitulo" style="float: right;padding-right: 20px;">
+                <h1 class="subtitulotexto"> <a href="#container">Início</a></h1>
+            </div>
+
+
+        </div>
+    </header>
+    <main>
+        <div class="container" id="container">
+            
+            <div class="card">
+                <div id="types" style="display: inline-flex;">
+                    <div class="groupTypes">
+                        <button id="actionPomodoro" onclick="actionPomodoro()">Pomodoro</button>
+                        <div class="groupTypesModifiers">
+                            <button id="actionAumentarPomodoro" class="ModificarTempo"
+                                onclick="actionModificar(60, 'pomodoro')">+1min</button>
+                            <button id="actionDiminuirPomodoro" class="ModificarTempo"
+                                onclick="actionModificar(-60, 'pomodoro')">-1min</button>
+                        </div>
+                    </div>
+                    <div class="groupTypes">
+                        <button id="actionShortBreak" onclick="actionShortBreak()">Short Break</button>
+                        <div class="groupTypesModifiers">
+                            <button id="actionAumentarshortBreak" class="ModificarTempo"
+                                onclick="actionModificar(60, 'shortBreak')">+1min</button>
+                            <button id="actionDiminuirshortBreak" class="ModificarTempo"
+                                onclick="actionModificar(-60, 'shortBreak')">-1min</button>
+                        </div>
+                    </div>
+                    <div class="groupTypes">
+                        <button id="actionLongBreak" onclick="actionLongBreak()">Long Break</button>
+                        <div class="groupTypesModifiers">
+                            <button id="actionAumentarlongBreak" class="ModificarTempo"
+                                onclick="actionModificar(60, 'longBreak')">+1min</button>
+                            <button id="actionDiminuirlongBreak" class="ModificarTempo"
+                                onclick="actionModificar(-60, 'longBreak')">-1min</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                    <div id="timer">
+                        <p id="timerText">25:00</p>
+                    </div>
+                <br>
+                        <div id="action">
+                            <button id="actionButton" onclick="actionTimer()">START</button>
+                        </div>
+            </div>
+        </div>
+        <div class="linha"></div>
+<div class="sobre" id="sobre">
+    <h2>Técnica Pomodoro</h2>
+   <img src="image/pomodoro.T.png" alt="">
    
-    <div id="title">
-    <div style="float: left;padding-left:70px;"><h1>Timer Pomodoro</h1></div>
-    
-    <div class="subtitulo" style="float: right;padding-right: 90px;"><h1 class="subtitulotexto" >Contato</h1></div>
-    <div class="subtitulo" style="float: right;padding-right: 20px;"><h1 class="subtitulotexto" >Sobre</h></div>
-    <div  class="subtitulo" style="float: right;padding-right: 20px;"><h1 class="subtitulotexto" >Início</h1></div>
-    
-      
 </div>
-</header>
-   
-    <div class="container">
-    <div class="card">
-        <div id="types">
-            <button id="actionPomodoro" onclick="actionPomodoro()">Pomodoro</button>
-            <button id="actionShortBreak" onclick="actionShortBreak()">Short Break</button>
-            <button id="actionLongBreak" onclick="actionLongBreak()">Long Break</button>
+<div class="linha"></div>
+
+    </main>
+    <footer> 
+        <div id="rodape">
+           
+                <p>Feito por Suanne Barbosa SP3099067</p>
+          
+            <p>TimerPomodoro 2023. All Rights Reserved </p>
         </div>
-
-    
-        <br>
-        <div id="timer">
-            <p id="timerText">04:55</p>
-
-        </div>
-    
-        <br>
-        <div id="action">
-            <button id="actionButton" onclick="actionTimer()">START</button>
-
-        </div>
-        
-    
-</div>
-
-</div>
-<footer>
-    <div id="rodape">
-    <p>TimerPomodoro  </p>
-</div>
-  </footer>
+    </footer>
 
 
-<script src="./app.js"></script>
+    <script src="./app.js"></script>
 </body>
+
 </html>
