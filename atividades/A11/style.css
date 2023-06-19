@@ -1,0 +1,43 @@
+body{
+    background-color: bisque;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    margin: 0;
+}
+
+header{
+  margin-top: 30px;
+  padding-left: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.form-control{
+   
+    background-color: #f2f2f2;
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container{
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.buscaCEP{
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
